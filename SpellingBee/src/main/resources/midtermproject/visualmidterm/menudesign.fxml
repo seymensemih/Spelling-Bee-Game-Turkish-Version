@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="midtermproject.visualmidterm.Controller">
+         <children>
+            <MenuBar prefHeight="40.0" prefWidth="800.0" />
+            <Button fx:id="randStart" layoutX="5.0" layoutY="5.0" mnemonicParsing="false" onAction="#onOtoGameStartClick" prefHeight="30.0" prefWidth="100.0" text="Rastgele Başlat" />
+            <Button fx:id="manStart" layoutX="125.0" layoutY="5.0" mnemonicParsing="false" onAction="#onManStartClick" prefHeight="30.0" prefWidth="150.0" text="Bu harflerle başlat --&gt;" />
+            <TextField fx:id="txtStart" layoutX="280.0" layoutY="5.0" prefHeight="30.0" prefWidth="115.0" promptText="7 harfli dizi giriniz." />
+            <Button fx:id="letter1" disable="true" layoutX="150.0" layoutY="80.0" mnemonicParsing="false" onAction="#onLetter1Click" prefHeight="80.0" prefWidth="80.0" styleClass="first-button" stylesheets="@hexagonshape.css" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="letter6" disable="true" layoutX="80.0" layoutY="120.0" mnemonicParsing="false" onAction="#onLetter6Click" prefHeight="80.0" prefWidth="80.0" styleClass="first-button" stylesheets="@hexagonshape.css" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="letter4" disable="true" layoutX="150.0" layoutY="240.0" mnemonicParsing="false" onAction="#onLetter4Click" prefHeight="80.0" prefWidth="80.0" styleClass="first-button" stylesheets="@hexagonshape.css" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="letter2" disable="true" layoutX="220.0" layoutY="120.0" mnemonicParsing="false" onAction="#onLetter2Click" prefHeight="80.0" prefWidth="80.0" styleClass="first-button" stylesheets="@hexagonshape.css" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="centerletter" disable="true" layoutX="150.0" layoutY="160.0" mnemonicParsing="false" onAction="#onCenterClick" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #EBA937; -fx-border-color: black;" styleClass="first-button" stylesheets="@hexagonshape.css" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="letter5" disable="true" layoutX="80.0" layoutY="200.0" mnemonicParsing="false" onAction="#onLetter5Click" prefHeight="80.0" prefWidth="80.0" styleClass="first-button" stylesheets="@hexagonshape.css" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="letter3" disable="true" layoutX="220.0" layoutY="200.0" mnemonicParsing="false" onAction="#onLetter3Click" prefHeight="80.0" prefWidth="80.0" styleClass="first-button" stylesheets="@hexagonshape.css">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="delButton" layoutX="80.0" layoutY="390.0" mnemonicParsing="false" onAction="#onDelButtonClick" prefHeight="30.0" prefWidth="70.0" text="SİL">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="shuffleButton" layoutX="155.0" layoutY="390.0" mnemonicParsing="false" onAction="#onShuffleButtonClick" prefHeight="30.0" prefWidth="70.0" text="KARIŞTIR">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="okButton" layoutX="230.0" layoutY="390.0" mnemonicParsing="false" onAction="#onCevapKontrolClick" prefHeight="30.0" prefWidth="70.0" text="TAMAM">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="pointLabel" layoutX="585.0" layoutY="480.0" prefHeight="30.0" prefWidth="200.0" text="0">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="outputLabel" layoutX="14.0" layoutY="430.0" prefHeight="132.0" prefWidth="400.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="skorLabel" layoutX="525.0" layoutY="480.0" prefHeight="30.0" prefWidth="50.0" text="Skor:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="txtArea" editable="false" layoutX="435.0" layoutY="80.0" prefHeight="380.0" prefWidth="350.0" text="Nasıl Oynanır ?&#10;1.Rastgele Başlat&#10;-Sözlükteki olası oyunları tarayarak size &#10;en az 1 pangram içeren bir oyun başlatır.&#10;2.Kullanıcı Girişiyle Başlat&#10;-Kullanıcıdan alınan 7 uzunlukta dizinin &#10;uygunluğu kontrol edip başlatır.İlk harfi&#10;merkez harf olarak &#10;alır.&#10;&#10;-Kurallar-&#10;1-Girilen kelime merkez harfi içermelidir.&#10;2-Girilen kelime uzunluğu 3'ten büyük olmalıdır.&#10;3-Sadece verilen harfler kullanılmalıdır.&#10;&#10;Tüm kelimeler bulunduğunda&#10;veya 444 puanı geçildiğinde &#10;oyun biter.&#10;&#10;&#10;">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </TextArea>
+            <TextField fx:id="txtAnswer" disable="true" layoutX="80.0" layoutY="340.0" prefHeight="25.0" prefWidth="220.0" />
+      <Button fx:id="cevapButton" layoutX="480.0" layoutY="550.0" mnemonicParsing="false" onAction="#onCevaplarClick" prefHeight="30.0" prefWidth="200.0" text="Cevapları Gör">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="txtTebrik" layoutX="480.0" layoutY="510.0" prefHeight="30.0" prefWidth="200.0" textFill="#ff1919">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="bulunanLabel" layoutX="435.0" layoutY="55.0" prefHeight="20.0" prefWidth="350.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+         </children>
+      </Pane>
